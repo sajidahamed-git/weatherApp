@@ -13,24 +13,24 @@
     >
       Weather
     </div>
+    <!-- Date Container-->
     <div id="mainContainer" class=" gap-4 flex-grow flex flex-col items-center justify-center text-white px-20">
-      <!-- Weather Condition -->
-      <div class="flex items-center self-start text-xl font-semibold">
+      <div class="flex items-center self-start text-xl font-semibold sm:text-4xl">
         <span id="condition" class="capitalize">Sunny</span>
       </div>
       
       <!-- City and Country -->
-      <div class="text-4xl font-medium self-start">
+      <div class="text-4xl font-medium self-start sm:text-6xl">
         <span id="city">New York</span>, <span id="country">US</span>
       </div>
       
       <!-- Temperature -->
-      <div class="text-2xl self-start font-bold">
+      <div class="text-2xl self-start font-bold sm:text-3xl">
         <span id="temperature">25</span>°C
       </div>
       
       <!-- Additional Details -->
-      <div class="flex flex-col gap-2 text-lg self-start font-bold">
+      <div class="flex flex-col gap-2 text-lg self-start font-bold sm:text-2xl ">
         <div>
           <span class="font-medium">Feels Like:</span> <span id="feels-like">27</span>°C
         </div>
@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-    
+    <!-- user input  -->
     <div
       id="user-input"
       class="flex h-[33%] flex-col items-center justify-center gap-8"
@@ -51,9 +51,9 @@
         type="text"
         id="input"
         placeholder="Search City"
-        class="rounded-lg py-2 pl-4"
+        class="rounded-lg py-2 pl-4 sm:w-[20%] sm:py-4"
       />
-      <button id="button" class="bg-white rounded-lg px-4 py-2">Submit</button>
+      <button id="button" class="bg-white rounded-lg px-4 py-2 sm:w-[5%] sm:text-xl sm:px-4 hover:bg-gray-600">Submit</button>
     </div>
   </body>
 </html>
