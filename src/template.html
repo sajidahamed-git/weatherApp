@@ -21,7 +21,7 @@
       
       <!-- City and Country -->
       <div class="text-4xl font-medium self-start sm:text-6xl">
-        <span id="city">New York</span>, <span id="country">US</span>
+        <span id="city">New York</span>, 
       </div>
       
       <!-- Temperature -->
@@ -43,7 +43,7 @@
       </div>
     </div>
     <!-- user input  -->
-    <div
+    <form
       id="user-input"
       class="flex h-[33%] flex-col items-center justify-center gap-8"
     >
@@ -51,9 +51,9 @@
         type="text"
         id="input"
         placeholder="Search City"
-        class="rounded-lg py-2 pl-4 sm:w-[20%] sm:py-4"
+        class="rounded-lg py-2 pl-4 border-4 sm:w-[20%] sm:py-2 sm:text-2xl"
       />
-      <button id="button" class="bg-white rounded-lg px-4 py-2 sm:w-[5%] sm:text-xl sm:px-4 hover:bg-gray-600">Submit</button>
-    </div>
+      <button type="submit" id="button" class="bg-white rounded-lg px-4 py-2 sm:w-[5%] sm:text-xl sm:px-4 hover:bg-gray-600">Submit</button>
+    </form>
   </body>
 </html>
