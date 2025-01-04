@@ -15,14 +15,26 @@ async function getWeather(cityName) {
     renderDOM(weatherData);
   } else console.log("jingel bell");
 }
-const main = document.getElementById("mainContainer");
+
+const condition = document.getElementById("condition");
 const city = document.getElementById("city");
+const feelsLike = document.getElementById("feels-like");   
+const temp = document.getElementById('temperature')
+const wind = document.getElementById('wind')
+const humidity = document.getElementById('humidity')
 function renderDOM(weatherData) {
+  const weatherInfo = weatherData.currentConditions;
   city.textContent = weatherData.resolvedAddress;
+
+  condition.textContent = weatherInfo.conditions;
+  feelsLike.textContent = weatherInfo.feelslike;
+  temp.textContent = weatherInfo.temp
+  wind.textContent = weatherInfo.windspeed
+  humidity.textContent = weatherInfo.humidity
 }
 async function callApi(cityName) {
   const response = await fetch(
-    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityName}?unitGroup=us&key=MAGHLZ9N4TZVZM3CAUY7MQCD8&contentType=json`,
+    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityName}?unitGroup=metric&key=MAGHLZ9N4TZVZM3CAUY7MQCD8&contentType=json`,
     {
       method: "GET",
       headers: {},
